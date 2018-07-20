@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WorkoutStorage</string>
+    <string name="workout_type">Workout Type</string>
+    <string name="rest_in_seconds">Rest (in seconds)</string>
+    <string name="userid">UserId</string>
+    <string name="reps">Reps</string>
+    <string name="exercise_name">Exercise Name</string>
+    <string name="sets">Sets</string>
+    <string name="workout_subtype">Workout Subtype</string>
+    <string name="next_arrow">Next Arrow</string>
+</resources>
