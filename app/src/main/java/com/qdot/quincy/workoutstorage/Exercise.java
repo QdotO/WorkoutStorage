@@ -1,5 +1,8 @@
 package com.qdot.quincy.workoutstorage;
 
+
+import com.google.gson.JsonObject;
+
 /**
  * Created by Quincy on 7/20/18.
  */
@@ -40,5 +43,11 @@ public class Exercise {
     }
 
 
-
+    public JsonObject toJson() {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("name", getName());
+        jsonObject.addProperty("sets", getSets());
+        jsonObject.addProperty("reps", getReps());
+        return jsonObject;
+    }
 }

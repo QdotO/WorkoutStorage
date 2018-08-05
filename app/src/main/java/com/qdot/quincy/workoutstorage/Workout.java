@@ -1,5 +1,16 @@
 package com.qdot.quincy.workoutstorage;
 
+import android.util.Log;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
+import org.json.JSONException;
+import com.google.gson.JsonObject;
+
 import java.util.ArrayList;
 
 /**
@@ -7,10 +18,23 @@ import java.util.ArrayList;
  */
 
 public class Workout {
-    public String type,
-            subtype,
-            rest;
+    public String type;
+    public String subtype;
+    public String rest;
+    public String userId;
     public ArrayList<Exercise> exerciseArrayList;
+
+    public String getUserId()
+    {
+        return userId;
+    }
+
+    public void setUserId(String userId)
+    {
+        this.userId = userId;
+    }
+
+
 
     public String getType() {
         return type;
@@ -41,6 +65,9 @@ public class Workout {
     }
 
     public void addExercise(Exercise exercise) {
+        if(this.exerciseArrayList == null){
+            this.exerciseArrayList = new ArrayList<>();
+        }
         this.exerciseArrayList.add(exercise);
     }
 
@@ -49,5 +76,23 @@ public class Workout {
         this.exerciseArrayList = exerciseArrayList;
     }
 
+    public JsonObject toJson()
+    {
+        JsonObject jsonObject = new JsonObject();
+        JsonArray jsonArray = new JsonArray();
+        jsonObject.addProperty("userId", getUserId());
+        jsonObject.addProperty("type", getType());
+        jsonObject.addProperty("subType", getSubtype());
+        jsonObject.addProperty("rest", getRest());
+        for (Exercise ex : getExerciseArrayList())
+        {
+            jsonArray.add(ex.toJson());
+        }
+        jsonObject.add("exercises",jsonArray);
+
+
+        Log.d("Workout.toJSON", "toJson: " + jsonObject.toString());
+        return jsonObject;
+    }
 
 }

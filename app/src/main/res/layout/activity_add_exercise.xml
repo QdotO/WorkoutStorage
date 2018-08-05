@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.qdot.quincy.workoutstorage.AddExercise">
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/addExerciseLayout"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             tools:context="com.qdot.quincy.workoutstorage.AddExercise">
 
     <EditText
         android:id="@+id/exerciseName"
@@ -14,70 +15,71 @@
         android:ems="10"
         android:hint="@string/exercise_name"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toTopOf="parent"
+        android:text="Leg Press"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintLeft_creator="1" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"/>
 
     <EditText
         android:id="@+id/reps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/reps"
         android:inputType="number"
+        android:text="10"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/exerciseName"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintHorizontal_bias="0.503" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"/>
 
     <EditText
         android:id="@+id/sets"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/sets"
         android:inputType="number"
+        android:text="4"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_constraintTop_creator="1"
-        tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="16dp"
         app:layout_constraintTop_toBottomOf="@+id/reps"
         tools:layout_constraintLeft_creator="1"
-        app:layout_constraintHorizontal_bias="0.503" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/AddExercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="33dp"
         android:layout_marginTop="28dp"
         android:clickable="true"
-        app:fabSize="auto"
+        app:fabSize="mini"
         app:layout_constraintRight_toRightOf="@+id/sets"
         app:layout_constraintTop_toBottomOf="@+id/sets"
         app:srcCompat="@drawable/ic_plus_one_black_24dp"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/done"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="62dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:clickable="true"
-        app:fabSize="mini"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/ic_check_black_24dp"
-        tools:layout_constraintBottom_creator="1" />
+        tools:layout_constraintBottom_creator="1"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -18,5 +18,5 @@
         </activity>
         <activity android:name=".AddExercise"></activity>
     </application>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
